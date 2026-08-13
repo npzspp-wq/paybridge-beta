@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="PAYBRIDGE Beta — compare international business payment routes." />
+  <title>PAYBRIDGE Beta</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="PAYBRIDGE home">
+      <span class="brand-mark">P</span>
+      <span>PAYBRIDGE</span>
+    </a>
+    <nav>
+      <a href="#compare">Compare</a>
+      <a href="#how">How it works</a>
+      <a href="#about">About</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <span class="eyebrow">BETA • INTERNATIONAL BUSINESS PAYMENTS</span>
+      <h1>Find a better route for your international business payment.</h1>
+      <p class="hero-copy">Compare estimated cost, delivery speed and availability across bank, fintech and stablecoin routes — before you send money.</p>
+    </section>
+
+    <section class="compare-shell" id="compare">
+      <form id="compareForm" class="compare-card">
+        <div class="field">
+          <label for="fromCountry">From</label>
+          <select id="fromCountry" required>
+            <option value="DE">Germany</option>
+            <option value="FR">France</option>
+            <option value="NL">Netherlands</option>
+            <option value="ES">Spain</option>
+            <option value="IT">Italy</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="toCountry">To</label>
+          <select id="toCountry" required>
+            <option value="AE">United Arab Emirates</option>
+            <option value="TR">Turkey</option>
+            <option value="SG">Singapore</option>
+            <option value="GB">United Kingdom</option>
+          </select>
+        </div>
+
+        <div class="field amount-field">
+          <label for="amount">You send</label>
+          <div class="amount-input">
+            <span>€</span>
+            <input id="amount" type="number" min="100" step="100" value="25000" required />
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="currency">Recipient currency</label>
+          <select id="currency" required>
+            <option value="AED">AED</option>
+            <option value="TRY">TRY</option>
+            <option value="SGD">SGD</option>
+            <option value="GBP">GBP</option>
+          </select>
+        </div>
+
+        <button type="submit" class="primary-button">COMPARE PAYMENTS</button>
+        <p class="data-note">Beta uses demo/estimated pricing only. No funds are held, transferred or exchanged by PAYBRIDGE.</p>
+      </form>
+    </section>
+
+    <section class="results" id="results" aria-live="polite" hidden>
+      <div class="results-heading">
+        <div>
+          <span class="eyebrow">COMPARISON RESULT</span>
+          <h2>Payment options</h2>
+        </div>
+        <div class="route-summary" id="routeSummary"></div>
+      </div>
+      <div id="resultCards" class="result-grid"></div>
+    </section>
+
+    <section class="how" id="how">
+      <span class="eyebrow">HOW IT WORKS</span>
+      <h2>One comparison. Several payment routes.</h2>
+      <div class="steps">
+        <article><strong>1</strong><h3>Enter the payment</h3><p>Choose corridor, amount and recipient currency.</p></article>
+        <article><strong>2</strong><h3>Compare routes</h3><p>See estimated fees, delivery times and provider availability.</p></article>
+        <article><strong>3</strong><h3>Choose the provider</h3><p>Continue directly to the provider. PAYBRIDGE never touches customer funds.</p></article>
+      </div>
+    </section>
+
+    <section class="about" id="about">
+      <h2>Built to test one question</h2>
+      <p>Can a simple independent comparison layer help SMEs make better international payment decisions? This beta measures demand before full API integrations and commercial launch.</p>
+    </section>
+  </main>
+
+  <footer>
+    <span>PAYBRIDGE Beta</span>
+    <span>Independent comparison prototype • Demo data</span>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
