@@ -9,102 +9,42 @@
 </head>
 <body>
   <header class="site-header">
-    <a class="brand" href="#top" aria-label="PAYBRIDGE home">
-      <span class="brand-mark">P</span>
-      <span>PAYBRIDGE</span>
-    </a>
-    <nav>
-      <a href="#compare">Compare</a>
-      <a href="#how">How it works</a>
-      <a href="#about">About</a>
-    </nav>
+    <a class="brand" href="#top" aria-label="PAYBRIDGE home"><span class="brand-mark">P</span><span>PAYBRIDGE</span></a>
+    <nav><a href="#compare">Compare</a><a href="#how">How it works</a><a href="#about">About</a></nav>
   </header>
 
   <main id="top">
     <section class="hero">
       <span class="eyebrow">BETA • INTERNATIONAL BUSINESS PAYMENTS</span>
       <h1>Find a better route for your international business payment.</h1>
-      <p class="hero-copy">Compare estimated cost, delivery speed and availability across bank, fintech and stablecoin routes — before you send money.</p>
+      <p class="hero-copy">Compare cost, delivery speed and route type before you send money internationally.</p>
+      <div class="trust-row"><span>Independent comparison</span><span>No custody</span><span>No payment credentials</span></div>
     </section>
 
     <section class="compare-shell" id="compare">
       <form id="compareForm" class="compare-card">
-        <div class="field">
-          <label for="fromCountry">From</label>
-          <select id="fromCountry" required>
-            <option value="DE">Germany</option>
-            <option value="FR">France</option>
-            <option value="NL">Netherlands</option>
-            <option value="ES">Spain</option>
-            <option value="IT">Italy</option>
-          </select>
-        </div>
-
-        <div class="field">
-          <label for="toCountry">To</label>
-          <select id="toCountry" required>
-            <option value="AE">United Arab Emirates</option>
-            <option value="TR">Turkey</option>
-            <option value="SG">Singapore</option>
-            <option value="GB">United Kingdom</option>
-          </select>
-        </div>
-
-        <div class="field amount-field">
-          <label for="amount">You send</label>
-          <div class="amount-input">
-            <span>€</span>
-            <input id="amount" type="number" min="100" step="100" value="25000" required />
-          </div>
-        </div>
-
-        <div class="field">
-          <label for="currency">Recipient currency</label>
-          <select id="currency" required>
-            <option value="AED">AED</option>
-            <option value="TRY">TRY</option>
-            <option value="SGD">SGD</option>
-            <option value="GBP">GBP</option>
-          </select>
-        </div>
-
+        <div class="field"><label for="fromCountry">From</label><select id="fromCountry" required><option value="DE">Germany</option><option value="FR">France</option><option value="NL">Netherlands</option><option value="ES">Spain</option><option value="IT">Italy</option></select></div>
+        <div class="field"><label for="toCountry">To</label><select id="toCountry" required><option value="AE">United Arab Emirates</option><option value="TR">Turkey</option><option value="SG">Singapore</option><option value="GB">United Kingdom</option></select></div>
+        <div class="field amount-field"><label for="amount">You send</label><div class="amount-input"><span>€</span><input id="amount" type="number" min="100" step="100" value="25000" required /></div></div>
+        <div class="field"><label for="currency">Recipient currency</label><select id="currency" required><option value="AED">AED</option><option value="TRY">TRY</option><option value="SGD">SGD</option><option value="GBP">GBP</option></select></div>
         <button type="submit" class="primary-button">COMPARE PAYMENTS</button>
-        <p class="data-note">Beta uses demo/estimated pricing only. No funds are held, transferred or exchanged by PAYBRIDGE.</p>
+        <p class="data-note"><strong>Beta mode:</strong> results below are simulated examples for product testing, not live provider quotes or financial offers.</p>
       </form>
     </section>
 
     <section class="results" id="results" aria-live="polite" hidden>
-      <div class="results-heading">
-        <div>
-          <span class="eyebrow">COMPARISON RESULT</span>
-          <h2>Payment options</h2>
-        </div>
-        <div class="route-summary" id="routeSummary"></div>
-      </div>
+      <div class="results-heading"><div><span class="eyebrow">COMPARISON RESULT</span><h2>Payment options</h2><p class="results-subtitle">Large recipient amount first. Cost, speed and data quality shown separately.</p></div><div class="route-summary" id="routeSummary"></div></div>
+      <div class="status-legend"><span><i class="dot demo"></i> DEMO — simulated</span><span><i class="dot estimate"></i> ESTIMATE — official public pricing</span><span><i class="dot live"></i> LIVE — provider API quote</span></div>
       <div id="resultCards" class="result-grid"></div>
+      <div class="result-warning">Demo numbers are generated only to test the interface and user intent. PAYBRIDGE Beta does not initiate a payment.</div>
     </section>
 
-    <section class="how" id="how">
-      <span class="eyebrow">HOW IT WORKS</span>
-      <h2>One comparison. Several payment routes.</h2>
-      <div class="steps">
-        <article><strong>1</strong><h3>Enter the payment</h3><p>Choose corridor, amount and recipient currency.</p></article>
-        <article><strong>2</strong><h3>Compare routes</h3><p>See estimated fees, delivery times and provider availability.</p></article>
-        <article><strong>3</strong><h3>Choose the provider</h3><p>Continue directly to the provider. PAYBRIDGE never touches customer funds.</p></article>
-      </div>
-    </section>
+    <section class="how" id="how"><span class="eyebrow">HOW IT WORKS</span><h2>One comparison. Several payment routes.</h2><div class="steps"><article><strong>1</strong><h3>Enter the payment</h3><p>Choose corridor, amount and recipient currency.</p></article><article><strong>2</strong><h3>Compare routes</h3><p>Compare amount received, estimated cost, speed and route type.</p></article><article><strong>3</strong><h3>Choose a provider</h3><p>Continue to the provider when live integrations are enabled. PAYBRIDGE does not hold customer funds.</p></article></div></section>
 
-    <section class="about" id="about">
-      <h2>Built to test one question</h2>
-      <p>Can a simple independent comparison layer help SMEs make better international payment decisions? This beta measures demand before full API integrations and commercial launch.</p>
-    </section>
+    <section class="about" id="about"><h2>Built to validate demand before spending money</h2><p>This public beta tests whether SMEs want a simple comparison layer for international business payments before PAYBRIDGE invests in provider APIs, company setup and commercial infrastructure.</p></section>
   </main>
 
-  <footer>
-    <span>PAYBRIDGE Beta</span>
-    <span>Independent comparison prototype • Demo data</span>
-  </footer>
-
+  <footer><span>PAYBRIDGE Beta</span><span>Independent comparison prototype • Simulated demo data</span></footer>
   <script src="script.js"></script>
 </body>
 </html>
