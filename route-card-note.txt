@@ -1,0 +1,1 @@
+Route detail modal files are present: route-details.js, route-card-wire.js, route-loader.js. They are ready to be loaded from the main page.
