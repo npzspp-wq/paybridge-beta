@@ -1,0 +1,1 @@
+window.PaybridgeReferenceRate={fallback:{AED:4.15,TRY:47.2,SGD:1.49,GBP:.86},get:async function(code){try{var r=await fetch('https://api.frankfurter.dev/v2/rate/EUR/'+code,{cache:'no-store'});var d=await r.json();if(r.ok&&d&&Number(d.rate))return{rate:Number(d.rate),date:d.date||'',reference:true};}catch(e){}return{rate:this.fallback[code]||1,date:'',reference:false};}};

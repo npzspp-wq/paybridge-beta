@@ -1,0 +1,1 @@
+(function(){var a=document.createElement('script');a.src='route-details.js';a.onload=function(){var b=document.createElement('script');b.src='route-card-wire.js';document.body.appendChild(b)};document.body.appendChild(a)})();
