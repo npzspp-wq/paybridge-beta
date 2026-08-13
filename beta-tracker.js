@@ -20,14 +20,17 @@
       var to=String(d.to||'').slice(0,20);
       var provider=String(d.provider||'').slice(0,50);
       var source=[from&&to?from+' -> '+to:'',provider].filter(Boolean).join(' | ');
+      var payload=JSON.stringify({
+        type:String(type||'').slice(0,50),
+        source:source||'paybridge-beta',
+        currency:String(d.currency||'').slice(0,10)
+      });
+
       fetch(ENDPOINT,{
         method:'POST',
-        headers:{'Content-Type':'application/json'},
-        body:JSON.stringify({
-          type:String(type||'').slice(0,50),
-          source:source||'paybridge-beta',
-          currency:String(d.currency||'').slice(0,10)
-        }),
+        mode:'no-cors',
+        headers:{'Content-Type':'text/plain;charset=UTF-8'},
+        body:payload,
         keepalive:true
       }).catch(function(){});
     }catch(e){}
